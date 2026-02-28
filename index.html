@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breath OS Demo Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <h1>Breath OS</h1>
+          <p class="tz" id="timezoneText"></p>
+          <nav>
+            <button class="nav-btn active">Command Center</button>
+            <button class="nav-btn">Missions</button>
+            <button class="nav-btn">Timeline</button>
+            <button class="nav-btn">Habits</button>
+            <button class="nav-btn">Growth</button>
+            <button class="nav-btn">Career Vault</button>
+            <button class="nav-btn">Plugins</button>
+          </nav>
+        </div>
+
+        <div class="profile sidebar-profile">Alex · Software Engineer · Nairobi</div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Breath OS Command Center</h2>
+            <p>Run your day with missions, habits, and career growth in one system.</p>
+          </div>
+          <div class="topbar-actions">
+            <button id="themeToggle" class="theme-toggle">Switch to Light</button>
+          </div>
+        </header>
+
+        <section class="summary-grid" id="summaryGrid"></section>
+
+        <section class="two-col">
+          <div class="panel card">
+            <h3>Hourly Task View</h3>
+            <p class="panel-subtitle">Scheduled tasks appear by hour. Complete them to earn XP.</p>
+            <ul id="hourlyTaskList"></ul>
+          </div>
+          <div class="panel card">
+            <h3>Unscheduled Task Queue</h3>
+            <p class="panel-subtitle">Tasks without a time are tracked separately.</p>
+            <ul id="unscheduledTaskList"></ul>
+          </div>
+        </section>
+
+        <section class="two-col">
+          <div class="panel card">
+            <h3>Recurring Habit Tracker</h3>
+            <p class="panel-subtitle">Tap check-in to track streaks and build momentum.</p>
+            <div id="habitList"></div>
+          </div>
+          <div class="panel card">
+            <h3>Gamification & Achievements</h3>
+            <ul id="achievementList"></ul>
+          </div>
+        </section>
+
+        <section class="three-col">
+          <div class="panel card">
+            <h3>Interest List</h3>
+            <ul id="interestList"></ul>
+          </div>
+          <div class="panel card">
+            <h3>Career Skills Tracker</h3>
+            <ul id="skillsList"></ul>
+          </div>
+          <div class="panel card">
+            <h3>Career Document Vault</h3>
+            <ul id="documentsList"></ul>
+          </div>
+        </section>
+
+        <section class="three-col">
+          <div class="panel card">
+            <h3>Calendar Events</h3>
+            <ul id="calendarList"></ul>
+          </div>
+          <div class="panel card">
+            <h3>Learning Notes</h3>
+            <ul id="notesList"></ul>
+          </div>
+          <div class="panel card">
+            <h3>Plugin Marketplace (Demo)</h3>
+            <div id="pluginList"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <button class="ai-fab" id="aiFab">AI</button>
+    <section class="ai-panel hidden card" id="aiPanel">
+      <header>
+        <h3>AI Assistant (Demo)</h3>
+        <button id="closeAi" class="icon-btn">✕</button>
+      </header>
+      <div class="messages" id="messages"></div>
+      <div class="input-row">
+        <input id="promptInput" placeholder="Ask for a mission plan..." />
+        <button id="sendPrompt" class="action-btn">Send</button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
